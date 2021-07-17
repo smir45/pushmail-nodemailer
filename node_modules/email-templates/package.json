@@ -1,0 +1,143 @@
+{
+  "name": "email-templates",
+  "description": "Create, preview, and send custom email templates for Node.js. Highly configurable and supports automatic inline CSS, stylesheets, embedded images and fonts, and much more! Made for sending beautiful emails with Lad.",
+  "version": "8.0.7",
+  "author": "Nick Baugh <niftylettuce@gmail.com> (http://niftylettuce.com)",
+  "bugs": {
+    "url": "https://github.com/forwardemail/email-templates/issues",
+    "email": "niftylettuce@gmail.com"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "contributors": [
+    "Nick Baugh <niftylettuce@gmail.com> (http://niftylettuce.com)"
+  ],
+  "dependencies": {
+    "@ladjs/i18n": "^7.2.3",
+    "consolidate": "^0.16.0",
+    "debug": "^4.3.1",
+    "get-paths": "^0.0.7",
+    "html-to-text": "^6.0.0",
+    "juice": "^7.0.0",
+    "lodash": "^4.17.21",
+    "nodemailer": "^6.6.0",
+    "preview-email": "^3.0.4"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.14.3",
+    "@babel/core": "^7.14.3",
+    "@babel/preset-env": "^7.14.2",
+    "@commitlint/cli": "^12.1.4",
+    "@commitlint/config-conventional": "^12.1.4",
+    "ava": "^3.15.0",
+    "cheerio": "^1.0.0-rc.9",
+    "codecov": "^3.8.2",
+    "cross-env": "^7.0.3",
+    "ejs": "^3.1.6",
+    "eslint": "^7.26.0",
+    "eslint-config-xo-lass": "^1.0.5",
+    "eslint-plugin-node": "^11.1.0",
+    "fixpack": "^4.0.0",
+    "husky": "^6.0.0",
+    "lint-staged": "^11.0.0",
+    "nodemailer-sendgrid": "^1.0.3",
+    "nyc": "^15.1.0",
+    "pug": "^3.0.2",
+    "remark-cli": "^9.0.0",
+    "remark-preset-github": "^4.0.1",
+    "xo": "^0.40.1"
+  },
+  "engines": {
+    "node": ">=8.3.0"
+  },
+  "files": [
+    "lib",
+    "locales"
+  ],
+  "homepage": "https://github.com/forwardemail/email-templates",
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm test",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "keywords": [
+    "consolidate",
+    "email",
+    "engine",
+    "koa",
+    "lad",
+    "lass",
+    "mailchimp",
+    "mailgun",
+    "mandrill",
+    "moonmail",
+    "nodemailer",
+    "postmark",
+    "pug",
+    "sendgrid",
+    "template",
+    "templates",
+    "transport"
+  ],
+  "license": "MIT",
+  "lint-staged": {
+    "linters": {
+      "*.js": [
+        "xo --fix",
+        "git add"
+      ],
+      "*.md": [
+        "remark . -qfo",
+        "git add"
+      ],
+      "package.json": [
+        "fixpack",
+        "git add"
+      ]
+    }
+  },
+  "main": "lib/index.js",
+  "prettier": {
+    "singleQuote": true,
+    "bracketSpacing": true,
+    "trailingComma": "none"
+  },
+  "remarkConfig": {
+    "plugins": [
+      "preset-github"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/forwardemail/email-templates"
+  },
+  "scripts": {
+    "ava": "cross-env NODE_ENV=test ava",
+    "build": "npm run build:clean && npm run build:lib",
+    "build:clean": "rimraf lib",
+    "build:lib": "babel src --out-dir lib",
+    "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
+    "lint": "xo && remark . -qfo && eslint lib",
+    "nyc": "cross-env NODE_ENV=test nyc ava",
+    "test": "npm run build && npm run lint && npm run ava",
+    "test-coverage": "npm run build && npm run lint && npm run nyc"
+  },
+  "xo": {
+    "prettier": true,
+    "space": true,
+    "extends": [
+      "xo-lass"
+    ],
+    "ignores": [
+      "config.js"
+    ],
+    "rules": {
+      "unicorn/prevent-abbreviations": "off",
+      "unicorn/prefer-module": "off"
+    }
+  }
+}

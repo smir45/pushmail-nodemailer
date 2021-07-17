@@ -1,0 +1,20 @@
+{
+  "name": "nodemailer-trial",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "bunyan": "^1.8.15",
+    "dotenv": "^10.0.0",
+    "email-templates": "^8.0.7",
+    "express": "^4.17.1",
+    "formidable": "^1.2.2",
+    "fs": "^0.0.1-security",
+    "handlebars": "^4.7.7",
+    "nodemailer": "^6.6.3",
+    "nodemailer-express-handlebars": "^4.0.0",
+    "promisify": "^0.0.3",
+    "pug": "^3.0.2",
+    "util": "^0.12.4"
+  }
+}

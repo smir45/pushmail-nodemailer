@@ -1,0 +1,58 @@
+{
+  "name": "encoding-japanese",
+  "version": "1.0.30",
+  "description": "Convert or detect character encoding in JavaScript",
+  "main": "src/index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "bannerify": "^1.0.1",
+    "browserify": "^16.5.0",
+    "mocha": "^6.2.0",
+    "power-assert": "^1.6.1",
+    "uglify-js": "^3.6.0",
+    "uglifyify": "^5.0.2",
+    "watchify": "^3.11.1"
+  },
+  "scripts": {
+    "compile": "browserify src/index.js -o encoding.js -s Encoding -p [ bannerify --file src/banner.js ] --no-bundle-external --bare",
+    "watch": "watchify src/index.js -o encoding.js -s Encoding -p [ bannerify --file src/banner.js ] --no-bundle-external --bare --poll=200 -v",
+    "minify": "uglifyjs encoding.js -o encoding.min.js --source-map \"url='encoding.min.js.map'\" --comments -c -m -b ascii_only=true,beautify=false",
+    "build": "npm run compile && npm run minify",
+    "test": "npm run build && mocha tests/test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/polygonplanet/encoding.js.git"
+  },
+  "keywords": [
+    "encoding",
+    "charset",
+    "iconv",
+    "japanese",
+    "unicode",
+    "utf",
+    "utf-8",
+    "utf-16",
+    "utf-32",
+    "sjis",
+    "shift_jis",
+    "eucjp",
+    "euc-jp",
+    "jis",
+    "iso-2022-jp",
+    "base64",
+    "convert",
+    "detect",
+    "urlencode",
+    "urldecode"
+  ],
+  "author": "polygon planet <polygon.planet.aqua@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/polygonplanet/encoding.js/issues"
+  },
+  "homepage": "https://github.com/polygonplanet/encoding.js"
+}
