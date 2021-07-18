@@ -1,21 +1,230 @@
+
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Email</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- <link rel="stylesheet" href="main.css" /> -->
+    <style>
+      * {
+        margin: 0%;
+        padding: 2px;
+        font-family: "Inter";
+      }
+      body {
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+        background-color: #E3E1E1;
+      }
+      .welcome {
+        background-color: white;
+        border-radius: 7px;
+        width: 600px;
+      }
+      .pirate-logo {
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 18px;
+        line-height: 24px;
+        font-weight: bold;
+      }
+      .hi-sujata {
+        /* margin: 40px 0px; */
+        padding: 25px;
+        background-color: #EAF4FF;
+        text-align: center;
+      }
+      .hi-sujata h1 {
+        font-weight: 500;
+        font-size: 40px;
+        line-height: 54px;
+        color: #206EDB;
+      }
+      .hi-sujata p {
+        color: #56666D;
+        font-weight: 500;
+        line-height: 33px;
+        font-size: 26px;
+      }
+      .feature-1 {
+        display: flex;
+        margin: 20px 0px;
+        font-size: 16px;
+        line-height: 26px;
+        color: #2E3B44;
+      }
+      .feature-1 h3 {
+        font-weight: 500;
+        font-size: 30px;
+        line-height: 46px;
+      }
+      .feature-1 button {
+        margin: 15px 75px 0px;
+        padding: 16px 32px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 26px;
+        border: 0px;
+        color: #206EDB;
+        background-color: white;
+      }
+      #feature-pop button {
+        margin: 15px 75px 0px;
+        padding: 16px 32px;
+        font-size: 16px;
+        border-radius: 5px;
+        background-color: #206EDB;
+        color: #ffff;
+        border: 0px;
+      }
+      .feature-image {
+        width: 100%;
+      }
+      .feature-image img {
+        width: 100%;
+      }
+      .footer {
+        margin-top: 20px;
+        background-color: #20262E;
+        padding: 24px;
+        color: #ffff;
+      }
+      .footer-contact {
+        display: grid;
+        justify-content: center;
+        grid-template-columns: 115px 115px 115px;
+        gap: 10px;
+      }
+      .footer-contact a {
+        text-decoration: none;
+        color: white;
+      }
+      .social-icon {
+        display: grid;
+        justify-content: center;
+        gap: 15px;
+        grid-template-columns: 20px 20px 20px;
+      }
+      .footer-rights {
+        display: flex;
+        justify-content: center;
+      }
+    </style>
   </head>
-
   <body>
-    <div class="container">
-
-      <div
-        class="elements"
-        style=""
-      >
-        <h1 style="color: #505050; font-size: 3em;" class="heading">Verify your Email.</h1>
-        <p class="desc">Please verify your email address.</p>
-      </div>
-
-    </div>
+    <main class="welcome">
+      <section class="container">
+        <div class="pirate-logo">
+          <img
+            src="https://examselect.sgp1.digitaloceanspaces.com/assets/vendors/1626420854319_logo.png"
+          />
+          <h3><span style="color: #1652B7">Exam</span> Pirate</h3>
+        </div>
+        <div class="hi-sujata">
+          <h1>
+            Hi Sujata
+            <img
+              src="https://examselect.sgp1.digitaloceanspaces.com/assets/vendors/1626420510345_Vector.svg"
+            />
+          </h1>
+          <p>Welcome to our team.</p>
+          <p>Great to have you on board</p>
+        </div>
+        <div class="feature-1" id="feature-pop">
+          <div class="feature-image">
+            <img
+              src="https://examselect.sgp1.digitaloceanspaces.com/assets/vendors/1626420257885_Landing%20Page1_macbookpro15_front%201.png"
+              alt="Exam pirate in laptop"
+            />
+          </div>
+          <div>
+            <h3>Popular and latest Exams</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore
+              dolores quibusdam molestiae voluptas facilis nihil placeat, saepe
+              magnam mollitia recusandae?
+            </p>
+            <button>Visit Now</button>
+          </div>
+        </div>
+        <hr />
+        <div class="feature-1">
+          <div class="feature-details">
+            <h3>Free Exam Practice</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore
+              dolores quibusdam molestiae voluptas facilis nihil placeat, saepe
+              magnam mollitia recusandae?
+            </p>
+            <button>Practice Now</button>
+          </div>
+          <div class="feature-image">
+            <img
+              src="https://examselect.sgp1.digitaloceanspaces.com/assets/vendors/1626424169203_Buy%20exam%2021_imac2013_front%201.png"
+              alt="Exam pirate in laptop"
+            />
+          </div>
+        </div>
+        <hr />
+        <div class="feature-1">
+          <div class="feature-image">
+            <img
+              src="https://examselect.sgp1.digitaloceanspaces.com/assets/vendors/1626424226325_My%20exam%20Grid_macbookgold_front%201.png"
+              alt="Exam pirate in laptop"
+            />
+          </div>
+          <div>
+            <h3>Exam History</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore
+              dolores nihil placeat, saepe magnam mollitia recusandae?
+            </p>
+            <button>Explore Now</button>
+          </div>
+        </div>
+        <hr />
+      </section>
+      <footer class="footer">
+        <div class="footer-base">
+          <div class="footer-contact">
+            <a href="#">Contact us</a>
+            <a href="#">Terms of use</a>
+            <a href="#">Privacy Policy</a>
+          </div>
+          <div class="social-icon">
+            <a
+              ><img
+                src="https://examselect.sgp1.digitaloceanspaces.com/assets/vendors/1626426430985_fb.svg"
+            /></a>
+            <a
+              ><img
+                src="https://examselect.sgp1.digitaloceanspaces.com/assets/vendors/1626426447869_Vector.png"
+            /></a>
+            <a
+              ><img
+                src="https://examselect.sgp1.digitaloceanspaces.com/assets/vendors/1626426605488_twt.svg"
+            /></a>
+          </div>
+          <div class="footer-rights">
+            <img
+              src="https://examselect.sgp1.digitaloceanspaces.com/assets/vendors/1626426870320_copyright.png"
+            />
+            <p>2021 Exam Pirate. All rights reserved</p>
+          </div>
+        </div>
+      </footer>
+    </main>
+    
   </body>
 </html>
